@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SEO META TAGS -->
+<meta name="description" content="Vijaya Lakshmi Millets & Spices – Pure, traditional millets and spices from Telangana. Farm fresh, stone ground, chemical free. Order easily via WhatsApp.">
+
+<meta name="keywords" content="Millets, Organic Spices, Ragi, Jowar, Turmeric, Red Chilli Powder, Telangana Millets, Organic Food Store">
+
+<meta name="author" content="Vijaya Lakshmi Millets & Spices">
+
+<!-- Open Graph (WhatsApp / Facebook Preview) -->
+<meta property="og:title" content="Vijaya Lakshmi Millets & Spices">
+<meta property="og:description" content="Pure millets & spices from Telangana. Order directly via WhatsApp.">
+<meta property="og:image" content="https://yourdomain.com/images/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourdomain.com">
+
+  <meta charset="UTF-8" />
+  <title>Organic Spices & Millets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+<div class="logo" onclick="scrollToTop()">
+  <img src="logo1.png" loading="lazy" alt="Vijaya Lakshmi Logo" width="120" height="60">
+  <div class="logo-text">
+  </div>
+</div>
+
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+    <span class="cart" onclick="goToCart()">🛒 <span id="cartCount">0</span></span>
+  </nav>
+</header>
+
+<section class="hero" >
+  <h1>Fresh Spices & Millets</h1>
+  <p>100% Natural & Healthy</p>
+  <button onclick="scrollToProducts()">Shop Now</button>
+</section>
+
+<section class="filters">
+  <button class="active" onclick="filterProducts('all')">All</button>
+  <button onclick="filterProducts('spices')">Spices</button>
+  <button onclick="filterProducts('millets')">Millets</button>
+</section>
+
+<section class="products" id="products">
+
+  <div class="card" data-category="spices">
+  <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5" loading="lazy" decoding="async">
+  <h3>Organic Turmeric</h3>
+  <p>₹180 / 250g</p>
+  <button onclick="addToCart('Turmeric',180)">Add to Cart</button>
+  </div>
+
+
+  <div class="card" data-category="spices">
+    <span class="badge">Best Seller</span>
+    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d" loading="lazy" decoding="async">
+    <h3>Red Chilli Powder</h3>
+    <p>₹150 / 100g</p>
+    <button onclick="addToCart('Red Chilli',150)">Add to Cart</button>
+  </div>
+
+  <div class="card" data-category="millets">
+    <img src="https://images.unsplash.com/photo-1604908554161-1eae36a5b19d" loading="lazy" decoding="async">
+    <h3>Foxtail Millet</h3>
+    <p>₹120 / 500g</p>
+    <button onclick="addToCart('Foxtail Millet',120)">Add to Cart</button>
+  </div>
+
+</section>
+
+<section class="cart-box" id="cart">
+  <h2>Your Cart</h2>
+
+  <ul id="cartItems"></ul>
+
+  <h3>Total: ₹<span id="total">0</span></h3>
+
+  <!-- Customer Details -->
+  <input type="text" id="custName" placeholder="Your Name" />
+  <input type="tel" id="custPhone" placeholder="Phone Number" />
+  <textarea id="custAddress" placeholder="Delivery Address"></textarea>
+
+  <button class="whatsapp" onclick="placeOrder()">Place Order on WhatsApp</button>
+</section>
+
+<section class="contact" id="contact">
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7615.92792600203!2d78.563496!3d17.365467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9fd2c5660bb9%3A0xbcb095d68c65d5af!2sVijayalakshmi%20Foods!5e0!3m2!1sen!2sin!4v1769530323105!5m2!1sen!2sin"
+  width="100%"
+  height="250"
+  style="border:0; margin-top:40px"
+  allowfullscreen=""
+  loading="lazy">
+</iframe>
+
+
+<footer>
+  <p >📍 
+    <a href="https://maps.app.goo.gl/9roFf2QTpDYtHzjE9" target="_blank" >
+      2-3-720/2,Lalitha Nagar, Alkapuri, Street:5 Hyderabad Telangana 500068
+    </a></p>
+  <p>
+    📧 <a href="mailto:vijayalakshmifood@gmail.com">
+      vijayalakshmifood@gmail.com
+    </a>
+  </p>
+
+  <p>
+    📞 <a href="tel:+919618082853">+91 9618082853</a>
+  </p>
+
+
+
+  <p>⏰ Mon–Sat: 9 AM – 8 PM</p>
+</footer>
+</section>
+
+<div id="orderSuccess" class="order-success">
+  <div class="success-box">
+    ✅ Order Ready!
+    <p>Redirecting to WhatsApp…</p>
+  </div>
+</div>
+<script src="script.js" defer></script>
+
+</body>
+</html>
